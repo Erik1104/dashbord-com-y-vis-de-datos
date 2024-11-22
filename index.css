@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+body {
+    background-color: #f0f4f8; /* Fondo suave para el body */
+    height: 100vh;
+}
+
+
+.header {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: "Inconsolata", monospace;
+    background-color: rgb(142, 142, 214);
+    color: white;
+    font-size: 2rem;
+}
+
+img {
+    margin-top: 1rem;
+}
+
+.grafica1 {
+    margin-left: 3rem
+}
+
+
+
+
+/* Contenedor principal de la gráfica */
+#chart {
+    width: 90%;
+    height: 500px;
+    background-color: #ffffff; /* Fondo blanco para la gráfica */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+}
+
+
+
+/* Ejes */
+.axis path,
+.axis line {
+    shape-rendering: crispEdges;
+    stroke: #ccc; /* Color suave para las líneas de los ejes */
+}
+
+.axis text {
+    font-size: 14px;
+    fill: #555; /* Texto oscuro y fácil de leer */
+}
+
+/* Líneas */
+.line {
+    fill: none;
+    stroke-width: 4;
+    transition: stroke 0.3s ease; /* Transición suave para las líneas */
+    border-radius: 8px;
+}
+
+/* Puntos sobre las líneas */
+circle {
+    fill: #3498db; /* Color de los puntos */
+    stroke: white;
+    stroke-width: 2;
+    transition: transform 0.2s ease, fill 0.2s ease; /* Transición suave para el tamaño y color */
+}
+
+circle:hover {
+    transform: scale(1.5); /* Aumenta el tamaño de los puntos al pasar el mouse */
+    fill: #e74c3c; /* Cambia el color de los puntos */
+}
+
+/* Tooltip */
+#tooltip {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    padding: 6px;
+    pointer-events: none;
+}
